@@ -1,0 +1,10 @@
+{
+  "vulnerable": "yes",
+  "human_review_needed": false,
+  "exploit_file": "exploit.py",
+  "exploit_job": "validate",
+  "sink": "mpdt check",
+  "local_test_result": "success",
+  "reason": "The mpdt check command invokes mypy, which can be exploited by providing a malicious mypy.ini file and a python script that mypy will execute as a plugin.",
+  "notes": "Verified locally that mpdt check triggers code execution via mypy plugins. The fork's main branch has been updated with the exploit files and a new entry in plugins.json."
+}
